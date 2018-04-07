@@ -1,0 +1,175 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+  	android:background="#FAFAFA" 
+    >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:background="#E1E1E1" >
+
+        <Button
+            android:id="@+id/home_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/ic_action_view_as_list"
+            android:text="@string/home"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/logolc" />
+
+        <Button
+            android:id="@+id/login_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/ic_action_person"
+            android:text="@string/login"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="horizontal" 
+        android:background="#A0A0A0">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:contentDescription="@string/contDesc"
+            android:src="@drawable/ic_action_back" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/photo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/frameLayout1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#E1E1E1"
+       >
+
+        <Button
+            android:id="@+id/gallery_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/gallery_icon" 
+            android:background="@android:color/transparent"
+            android:text="@string/gallery"
+            android:textSize="12sp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/upload_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/upload_icon" 
+            android:background="@android:color/transparent"
+            android:text="@string/upload"
+            android:textSize="12sp"
+            android:layout_weight="1" 
+          />
+
+         <Button
+            android:id="@+id/map_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/map" 
+            android:background="@android:color/transparent"
+            android:text="@string/map"
+            android:textSize="12sp"
+            android:layout_weight="1" 
+          />
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layout_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_marginTop="18dp" >
+	            <ImageView
+	            android:id="@+id/icon_detail"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            
+	            android:src="@drawable/map" 
+	            android:background="@android:color/transparent"
+	            android:layout_gravity="center_horizontal"
+	            android:textSize="12sp"
+	            android:contentDescription="@string/contDesc" 
+	          />
+
+             <TextView
+                 android:id="@+id/text_title"
+                 android:layout_width="wrap_content"
+                 android:layout_height="0dp"
+                 android:layout_weight="1"
+                 android:layout_gravity="center_horizontal"
+                 android:layout_marginTop="10dp"
+                 android:text="@string/eventDesc"
+                 android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/eventDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/photo_layout"
+            android:layout_below="@id/layout_detail"
+            android:layout_marginBottom="4dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+	
+                <ProgressBar
+                android:id="@+id/loading"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="visible" />
+                
+                 <TextView
+                     android:id="@+id/text_detail"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="20dp"
+                     android:layout_marginStart="20dp"
+                     android:layout_marginTop="3dp"
+                     android:text="@string/contDesc" />
+
+            </LinearLayout>
+        </ScrollView>
+
+</RelativeLayout>
